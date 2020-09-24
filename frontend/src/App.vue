@@ -7,16 +7,18 @@
 </template>
 
 <style lang="scss">
+// Noto Sans JP
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap");
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 #nav {
-  padding: 30px;
+  padding: 30px 0 15px 0;
 
   a {
     font-weight: bold;
