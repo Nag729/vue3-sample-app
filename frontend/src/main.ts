@@ -1,9 +1,9 @@
 // use bulma
-import "bulma/css/bulma.css";
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+import 'bulma/css/bulma.css';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
 createApp(App)
   .use(router)
-  .mount("#app");
+  .mount('#app');
