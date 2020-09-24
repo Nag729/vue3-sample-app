@@ -37,7 +37,7 @@ html {
 
 #nav {
   text-align: center;
-  padding: 30px 0 15px 0;
+  padding: 3vh 0 2vh 0;
 
   a {
     font-weight: bold;
