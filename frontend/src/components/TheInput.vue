@@ -36,7 +36,7 @@ export default defineComponent({
     type HandleInput = (value: string) => void;
 
     // $emit
-    const handleInput: HandleInput = (value) => {
+    const handleInput: HandleInput = value => {
       emit('update:modelValue', value);
     };
 

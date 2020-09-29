@@ -25,9 +25,9 @@ import { defineComponent, PropType, reactive } from 'vue';
 
 // types
 interface TableItems {
-  id: string
-  title: string,
-  url: string
+  id: string;
+  title: string;
+  url: string;
 }
 
 export default defineComponent({
@@ -49,10 +49,10 @@ export default defineComponent({
             title: 'Article two',
             url: ''
           }
-        ]
+        ];
       }
     }
-  },
+  }
 });
 </script>
 

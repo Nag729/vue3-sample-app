@@ -40,48 +40,50 @@ export default defineComponent({
   setup() {
     // types
     interface QiitaItem {
-      body: string,
-      coediting: boolean,
-      comments_count: number,
-      created_at: string,
-      group: null,
-      id: string,
-      likes_count: number,
-      page_views_count: null
-      private: boolean,
-      reactions_count: number,
-      rendered_body: string,
-      tags: string[],
-      title: string,
-      updated_at: string,
-      url: string,
-      user: string
+      body: string;
+      coediting: boolean;
+      comments_count: number;
+      created_at: string;
+      group: null;
+      id: string;
+      likes_count: number;
+      page_views_count: null;
+      private: boolean;
+      reactions_count: number;
+      rendered_body: string;
+      tags: string[];
+      title: string;
+      updated_at: string;
+      url: string;
+      user: string;
     }
 
     interface GetQiitaItemParams {
       params: {
-        page: number,
-        per_page: number,
-        query: string
-      }
+        page: number;
+        per_page: number;
+        query: string;
+      };
     }
 
     type GetQiitaItem = () => void;
 
     interface TableItems {
-      id: string
-      title: string
-      url: string
+      id: string;
+      title: string;
+      url: string;
     }
 
     // reactive data
     const state = reactive<{ keywords: string; items: TableItems[] }>({
       keywords: '',
-      items: [{
-        id: '',
-        title: '',
-        url: ''
-      }]
+      items: [
+        {
+          id: '',
+          title: '',
+          url: ''
+        }
+      ]
     });
 
     // button clicked event
@@ -101,8 +103,8 @@ export default defineComponent({
               id: d.id,
               title: d.title,
               url: d.url
-            }
-          })
+            };
+          });
           state.items = data;
         });
     };
