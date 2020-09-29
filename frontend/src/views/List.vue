@@ -1,5 +1,5 @@
 <template>
-  <div class="trends">
+  <div class="list">
     <!-- Qiita icon -->
     <figure class="card image logo-image">
       <img src="@/assets/qiita.png" />
@@ -29,7 +29,7 @@ import TheInput from '@/components/TheInput.vue';
 import TheTable from '@/components/TheTable.vue';
 
 export default defineComponent({
-  name: 'About',
+  name: 'List',
 
   components: {
     TheButton,
