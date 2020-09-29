@@ -2,37 +2,42 @@
   <div class="field">
     <label class="label">{{ label }}</label>
     <div class="control">
-      <input class="input" type="text" :placeholder="placeholder" />
+      <input
+        class="input"
+        type="text"
+        :placeholder="placeholder"
+        :value="modelValue"
+        @input="handleInput($event.target.value)"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-
-type Props = {
-  placeholder: string;
-};
+import { defineComponent, PropType } from 'vue';
 
 export default defineComponent({
   name: 'TheInput',
 
   props: {
     label: {
-      type: String,
+      type: String as PropType<string>,
       default: 'label'
     },
-    value: String,
+    modelValue: String as PropType<string>,
     placeholder: {
-      type: String,
+      type: String as PropType<string>,
       default: 'Type Here'
     }
   },
 
   setup(props, { emit }) {
+    // type
+    type HandleInput = (value: string) => void;
+
     // $emit
-    const handleInput = () => {
-      emit('button-click');
+    const handleInput: HandleInput = (value) => {
+      emit('update:modelValue', value);
     };
 
     return { handleInput };

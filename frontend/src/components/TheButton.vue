@@ -1,24 +1,20 @@
 <template>
   <div class="control">
-    <button class="button is-primary" @click="handleClick">
+    <button class="button is-link" @click="handleClick">
       {{ buttonCaption }}
     </button>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
-
-type Props = {
-  value: string;
-};
+import { computed, defineComponent, PropType } from 'vue';
 
 export default defineComponent({
   name: 'TheButton',
 
   props: {
     value: {
-      type: String,
+      type: String as PropType<string>,
       default: 'VALUE'
     }
   },
@@ -27,8 +23,11 @@ export default defineComponent({
     // computed
     const buttonCaption = computed(() => props.value + ' Button!');
 
+    // type
+    type HandleClick = () => void;
+
     // $emit
-    const handleClick = () => {
+    const handleClick: HandleClick = () => {
       emit('button-click');
     };
 

@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
 
 html {
-  height: 100%;
+  min-height: 100%;
   background: #1c92d2; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -27,6 +27,11 @@ html {
     #f2fcfe,
     #1c92d2
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // modify bulma section
+  .section {
+    padding: 2rem 1.5rem;
+  }
 }
 
 #app {
